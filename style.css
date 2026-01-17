@@ -164,7 +164,7 @@ body {
 }
 
 /* ===============================
-    TECNOLOGÍAS (CORREGIDO MÓVIL)
+    TECNOLOGÍAS (GRID PARA MÓVIL)
    =============================== */
 .tech-container {
     display: flex;
@@ -200,9 +200,10 @@ body {
 
 .tech-icon { font-size: 3rem; margin-bottom: 10px; transition: 0.3s; color: var(--color-texto-secundario); }
 .tech-name { font-size: 0.75rem; font-weight: 700; color: var(--color-texto-secundario); }
+
 .tech-box:hover .tech-name { color: var(--color-texto-principal); }
 
-/* Colores hover de tecnologías */
+/* Colores hover */
 .tech-box:hover .devicon-java-plain { color: #f89820 !important; }
 .tech-box:hover .devicon-csharp-plain { color: #9b4993 !important; }
 .tech-box:hover .devicon-kotlin-plain { color: #7f52ff !important; }
@@ -220,7 +221,7 @@ body.dark-mode .tech-box:hover .devicon-github-original { color: #ffffff !import
 .tech-box:hover .devicon-docker-plain { color: #2496ed !important; }
 
 /* ===============================
-    EFECTOS CARDS
+    EFECTOS INTERACTIVOS CARDS
    =============================== */
 .interactive-card {
     transition: all 0.4s ease-in-out !important;
@@ -275,7 +276,7 @@ body.dark-mode .tech-box:hover .devicon-github-original { color: #ffffff !import
 }
 
 /* ===============================
-    SWITCH & MEDIA QUERIES
+    MODO OSCURO SWITCH (CORRECCIÓN MÓVIL)
    =============================== */
 .theme-switch {
     position: fixed;
@@ -285,43 +286,57 @@ body.dark-mode .tech-box:hover .devicon-github-original { color: #ffffff !import
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    display: flex;
+    display: flex !important; /* Asegurar que se muestre */
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 2000;
+    z-index: 9999; /* Máxima prioridad sobre todo */
     transition: 0.3s;
     border: 3px solid white;
 }
-.theme-switch::before { content: "🌙"; font-size: 24px; }
-body.dark-mode .theme-switch::before { content: "☀️"; }
+
+/* Iconos del switch */
+.theme-switch::before { 
+    content: "🌙"; 
+    font-size: 24px; 
+    display: block;
+}
+body.dark-mode .theme-switch::before { 
+    content: "☀️"; 
+}
+
 .theme-switch:hover { transform: rotate(360deg) scale(1.1); }
 
+/* ===============================
+    MEDIA QUERIES
+   =============================== */
 @media (max-width: 768px) {
-    .display-3 { font-size: 2.5rem; }
+    .display-3 { font-size: 2.2rem; }
     .hero-img-dev { width: 220px; height: 220px; }
     .hero-section { text-align: center; }
     
-    /* Tecnologías de 3 en 3 en móvil */
+    /* Mostrar tecnologías en cuadrícula de 3 */
     .tech-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        gap: 12px;
         padding: 10px;
     }
     
     .tech-box {
-        width: 100%; /* Ajusta al ancho de la columna del grid */
-        height: 100px;
-        padding: 5px;
+        width: 100%;
+        height: 105px;
     }
     
-    .tech-icon {
-        font-size: 2rem;
-        margin-bottom: 5px;
+    .tech-icon { font-size: 2.2rem; margin-bottom: 5px; }
+    .tech-name { font-size: 0.65rem; }
+
+    /* Asegurar que el switch sea visible en móvil */
+    .theme-switch {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
     }
-    
-    .tech-name {
-        font-size: 0.6rem;
-    }
+    .theme-switch::before { font-size: 20px; }
 }

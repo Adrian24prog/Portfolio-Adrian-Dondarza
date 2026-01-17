@@ -265,10 +265,13 @@
     document.addEventListener('DOMContentLoaded', function() {
       const toggle = document.getElementById('theme-toggle');
       const body = document.body;
+      
+      // Cargar tema guardado
       if (localStorage.getItem('theme') === 'dark') {
         toggle.checked = true;
         body.classList.add('dark-mode');
       }
+
       toggle.addEventListener('change', function() {
         if (toggle.checked) {
           body.classList.add('dark-mode');
