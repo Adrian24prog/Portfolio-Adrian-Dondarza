@@ -6,207 +6,300 @@
   <meta name="description" content="Portfolio de Adrián Dondarza, estudiante de Desarrollo de Aplicaciones Multiplataforma">
   <meta name="keywords" content="HTML, CSS, JavaScript, React, Portfolio, Desarrollador, DAM">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adrián Dondarza | Portfolio</title>
+  <title>Adrián Dondarza | Portfolio &middot; DAM</title>
+  
   <link rel="icon" type="image/png" href="imagenes/icono.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
   <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Navegación -->
-  <nav class="navbar navbar-expand-md navbar-custom sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="imagenes/icono.png" alt="Logo" class="logo">
+  <input type="checkbox" id="theme-toggle" class="d-none">
+  <label for="theme-toggle" class="theme-switch shadow-lg" title="Cambiar tema"></label>
+
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+        <img src="imagenes/icono.png" alt="Logo" class="logo me-2">
         <span class="brand-text">Adrián Dondarza</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbar-toggler">
-        <ul class="navbar-nav align-items-center">
+        <ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="#soft-skills">Soft skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certificaciones">Certificaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#soft-skills">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificaciones">Certificados</a></li>
           <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item d-lg-block d-none"><span class="nav-link text-white-50">|</span></li>
+          <li class="nav-item"><a class="nav-link btn btn-outline-light btn-sm rounded-pill px-3 ms-lg-2 mt-2 mt-lg-0" href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-      <img class="hero-img-desarrollador" src="imagenes/perfil.jpg" alt="Foto de perfil">
-      <h1>Hola, soy Adrián Dondarza</h1>
-      <h2>Estudiante de Desarrollo de Aplicaciones Multiplataforma</h2>
-      <a href="#proyectos" class="btn-hero">Ver Proyectos</a>
+  <section class="hero-section d-flex align-items-center py-5">
+    <div class="container">
+      <div class="row justify-content-center align-items-center g-5">
+        <div class="col-10 col-sm-8 col-md-5 order-md-2 text-center">
+          <img class="hero-img-dev img-fluid shadow-lg" src="imagenes/perfil.jpg" alt="Foto de perfil">
+          <p class="small mt-3 text-secondary-color">(Estudiante DAM en Ciudad Real)</p>
+        </div>
+        <div class="col-md-7 order-md-1 text-center text-md-start">
+          <p class="fs-4 fw-bold text-acento mb-1">Hola, soy</p>
+          <h1 class="display-3 fw-bolder text-principal">Adrián Dondarza</h1>
+          <h2 class="mb-4 fs-3 text-secondary-color">Estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma</strong> 💻</h2>
+          <a href="#proyectos" class="btn btn-lg btn-primary rounded-pill fw-bold shadow-sm px-4 py-2 mt-3">Ver Proyectos <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Sobre mí -->
-  <section id="sobre-mi" class="sobre-mi seccion-oscura">
-    <div class="contenedor">
-      <h2 class="seccion-titulo">Conoce a Adrián Dondarza</h2>
-      <p class="seccion-texto">
-        Soy estudiante de segundo año del ciclo formativo de <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>, apasionado por la tecnología y el desarrollo de software. Me encanta crear soluciones digitales que mejoren la vida de las personas y resuelvan problemas reales.
-      </p>
-      <p class="seccion-texto">
-        Actualmente estoy profundizando en <strong>Java, SQL, HTML, CSS, JavaScript</strong> y explorando frameworks modernos para el desarrollo web y móvil. Mi objetivo es seguir aprendiendo, crecer profesionalmente y aportar valor a través de proyectos innovadores y colaborativos.
-      </p>
-      <a href="descargas/Europass-Adrian_Dondarza.pdf" download class="btn-hero">Descargar CV</a>
+  <section id="sobre-mi" class="py-5 section-dark text-white">
+    <div class="container text-center py-4">
+      <div class="max-w-750 mx-auto">
+        <h2 class="display-5 fw-bold mb-4">Conoce a Adrián Dondarza</h2>
+        <p class="fs-5 mb-4 lead text-light">
+          Soy estudiante de segundo año de <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>, apasionado por la tecnología y el software. Busco soluciones digitales creativas y eficientes.
+        </p>
+        <p class="fs-5 mb-5 lead text-light">
+          Actualmente profundizo en <strong>Java, SQL, HTML, CSS, JavaScript</strong> y exploro frameworks modernos. Mi objetivo es seguir aprendiendo y aportar valor a través de proyectos innovadores.
+        </p>
+        <a href="descargas/Europass-Adrian_Dondarza.pdf" download class="btn btn-lg btn-outline-light rounded-pill px-4">
+          <i class="bi bi-file-earmark-pdf me-2"></i>Descargar CV (Europass)
+        </a>
+      </div>
     </div>
   </section>
 
-
-
-    <!-- Soft Skills -->
-    <section id="soft-skills" class="soft-skills seccion-clara py-5">
-        <div class="container text-center">
-            <h2 class="mb-5">Soft Skills</h2>
-            <div class="row g-4">
-
-                <div class="col-12 col-md-4">
-                    <div class="skill-card p-4 shadow rounded-4 h-100">
-                        <i class="bi bi-chat-dots fs-1 text-primary mb-3"></i>
-                        <h5 class="mb-3">Comunicación</h5>
-                        <p>Me esfuerzo por expresar ideas con claridad y trabajar de forma efectiva en equipo.</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="skill-card p-4 shadow rounded-4 h-100">
-                        <i class="bi bi-people fs-1 text-primary mb-3"></i>
-                        <h5 class="mb-3">Trabajo en Equipo</h5>
-                        <p>Disfruto colaborar, compartir conocimientos y aportar al logro de objetivos comunes.</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="skill-card p-4 shadow rounded-4 h-100">
-                        <i class="bi bi-lightning-charge fs-1 text-primary mb-3"></i>
-                        <h5 class="mb-3">Resolución de Problemas</h5>
-                        <p>Busco soluciones prácticas y creativas a los desafíos que surgen en el desarrollo.</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="skill-card p-4 shadow rounded-4 h-100">
-                        <i class="bi bi-hourglass-split fs-1 text-primary mb-3"></i>
-                        <h5 class="mb-3">Gestión del Tiempo</h5>
-                        <p>Organizo mis tareas para cumplir objetivos y optimizar la productividad diaria.</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="skill-card p-4 shadow rounded-4 h-100">
-                        <i class="bi bi-lightbulb fs-1 text-primary mb-3"></i>
-                        <h5 class="mb-3">Creatividad</h5>
-                        <p>Encuentro nuevas formas de abordar problemas y desarrollar soluciones innovadoras.</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="skill-card p-4 shadow rounded-4 h-100">
-                        <i class="bi bi-person-check fs-1 text-primary mb-3"></i>
-                        <h5 class="mb-3">Responsabilidad</h5>
-                        <p>Asumo mis compromisos con seriedad y cumplo con los plazos establecidos.</p>
-                    </div>
-                </div>
-
-            </div>
+  <section id="soft-skills" class="py-5 section-light">
+    <div class="container text-center">
+      <h2 class="display-4 fw-bold mb-5 text-principal">Habilidades Blandas 🧠</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card skill-card p-4 shadow-sm rounded-4 h-100 transition-hover-up">
+            <i class="bi bi-chat-dots fs-1 text-acento mb-3"></i>
+            <h5 class="fw-bold text-principal">Comunicación</h5>
+            <p class="small text-secondary-color">Me esfuerzo por expresar ideas con claridad y trabajar de forma efectiva en equipo.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Certificaciones -->
-    <section id="certificaciones" class="certificaciones seccion-clara py-5">
-        <div class="container text-center">
-            <h2 class="mb-5">Certificaciones y Formación</h2>
-            <div class="row g-4">
-
-                <div class="col-12 col-md-6">
-                    <div class="cert-card p-4 shadow rounded-4 h-100 d-flex flex-column">
-                        <i class="bi bi-patch-check-fill fs-1 text-primary mb-3"></i>
-                        <h5 class="mb-2">Desarrollo Web Moderno con Laravel: De la teoría a la práctica</h5>
-                        <p class="small">Curso enfocado en el desarrollo de aplicaciones web con Laravel, cubriendo conceptos desde la teoría hasta la implementación práctica.</p>
-                        <a href="https://academia.openwebinars.net/portada/desarrollo-web-moderno-laravel-teoria-practica/" target="_blank" class="badge mt-auto">OpenWebinars</a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <div class="cert-card p-4 shadow rounded-4 h-100 d-flex flex-column">
-                        <i class="bi bi-patch-check-fill fs-1 text-primary mb-3"></i>
-                        <h5 class="mb-2">Curso de Desarrollo de Apps Móviles</h5>
-                        <p class="small">Curso oficial de Google sobre diseño y creación de aplicaciones móviles multiplataforma.</p>
-                        <a href="https://skillshop.exceedlms.com/student/collection/798207-apps" target="_blank" class="badge mt-auto">Google</a>
-                    </div>
-                </div>
-
-            </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card skill-card p-4 shadow-sm rounded-4 h-100 transition-hover-up">
+            <i class="bi bi-people fs-1 text-acento mb-3"></i>
+            <h5 class="fw-bold text-principal">Trabajo en Equipo</h5>
+            <p class="small text-secondary-color">Disfruto colaborar, compartir conocimientos y aportar al logro de objetivos comunes.</p>
+          </div>
         </div>
-    </section>
-
-     <!-- Proyectos -->
-  <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
-    <h2 class="seccion-titulo texto-negro">Mis proyectos</h2>
-    <h3 class="seccion-descripcion">Consulta los proyectos en mi GitHub:</h3>
-    <div class="container text-center proyecto-contenedor">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-6 col-lg-4 mt-5">
-          <div class="proyecto position-relative">
-            <img src="imagenes/portadaProyecto.png" alt="GitHub Portfolio" class="img-fluid rounded">
-            <a href="https://github.com/Adrian24prog/Portfolio-Adrian-Dondarza" target="_blank" class="btn btn-dark position-absolute top-50 start-50 translate-middle">
-              <i class="bi bi-github"></i> Ver proyecto
-            </a>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card skill-card p-4 shadow-sm rounded-4 h-100 transition-hover-up">
+            <i class="bi bi-lightning-charge fs-1 text-acento mb-3"></i>
+            <h5 class="fw-bold text-principal">Resolución de Problemas</h5>
+            <p class="small text-secondary-color">Busco soluciones prácticas y creativas a los desafíos que surgen en el desarrollo.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-
-<section id="contacto" class="contacto seccion-oscura2 py-5">
-  <div class="container">
-    <div class="container rectangulo text-light p-4 rounded d-flex align-items-center justify-content-center" style="min-height: 200px;">
-      <div class="row w-100 text-center text-md-start align-items-center">
-        <!-- Título -->
-        <div class="col-12 col-md-4 mb-4 mb-md-0">
-          <h2 class="fw-bold">¡Hablemos!</h2>
+  <section id="certificaciones" class="py-5 section-dark">
+    <div class="container text-center text-white">
+      <h2 class="display-4 fw-bold mb-5">Certificaciones 🎓</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-lg-6">
+          <div class="card cert-card p-4 shadow-lg rounded-4 h-100 transition-hover-up text-start">
+            <div class="d-flex align-items-start">
+              <i class="bi bi-code-slash fs-2 text-acento me-3"></i>
+              <div>
+                <h5 class="fw-bold mb-1 text-principal">Desarrollo Web Moderno con Laravel</h5>
+                <p class="small text-secondary-color mb-2">OpenWebinars | En curso</p>
+                <p class="small text-secondary-color">Curso enfocado en el desarrollo de aplicaciones web con Laravel y PHP.</p>
+              </div>
+            </div>
+            <a href="https://academia.openwebinars.net/portada/desarrollo-web-moderno-laravel-teoria-practica/" target="_blank" class="badge bg-acento text-white text-decoration-none mt-3 align-self-start px-3 py-2">Ver credencial</a>
+          </div>
         </div>
-
-        <!-- Descripción -->
-        <div class="col-12 col-md-5 mb-4 mb-md-0">
-          <p>
-            ¿Tienes una propuesta, colaboración o práctica en mente? Estoy abierto a nuevas oportunidades y encantado de escucharte.
-          </p>
+        <div class="col-12 col-lg-6">
+          <div class="card cert-card p-4 shadow-lg rounded-4 h-100 transition-hover-up text-start">
+            <div class="d-flex align-items-start">
+              <i class="bi bi-phone fs-2 text-acento me-3"></i>
+              <div>
+                <h5 class="fw-bold mb-1 text-principal">Desarrollo de Apps Móviles</h5>
+                <p class="small text-secondary-color mb-2">Google | Completado</p>
+                <p class="small text-secondary-color">Formación oficial sobre diseño y creación de apps multiplataforma.</p>
+              </div>
+            </div>
+            <a href="https://skillshop.exceedlms.com/student/collection/798207-apps" target="_blank" class="badge bg-acento text-white text-decoration-none mt-3 align-self-start px-3 py-2">Ver credencial</a>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Botón -->
-        <div class="col-12 col-md-3 d-flex justify-content-center justify-content-md-end">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adriandondarza@gmail.com" target="_blank" class="btn btn-outline-light d-flex align-items-center gap-2">
-            <i class="bi bi-envelope-check fs-5"></i>
-            <span>Enviar correo</span>
+  <section id="proyectos" class="py-5 section-light">
+    <div class="container text-center">
+      <h2 class="display-4 fw-bold mb-3 text-principal">Mis Proyectos</h2>
+      <p class="fs-5 mb-5 text-secondary-color">Explora mi código fuente en GitHub.</p>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <a href="https://github.com/Adrian24prog/" target="_blank" class="text-decoration-none transition-hover-up d-block">
+            <div class="card p-4 shadow-lg rounded-4 bg-dark-card border-acento-hover">
+              <div class="d-flex align-items-center">
+                <i class="bi bi-github fs-1 me-4 text-acento"></i>
+                <div class="text-start">
+                  <h4 class="mb-1 text-principal fw-bold">GitHub Repository</h4>
+                  <p class="mb-0 small text-secondary-color">Accede a todos mis repositorios y contribuciones.</p>
+                </div>
+                <i class="bi bi-box-arrow-up-right fs-4 ms-auto text-principal"></i>
+              </div>
+            </div>
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+<section id="contacto" class="py-5 section-cta">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="cta-box p-4 p-md-5 rounded-4 shadow-lg">
+          <h2 class="display-5 fw-bold text-white text-center mb-4">¡Conectemos! 🤝</h2>
+          
+          <form id="my-form" action="https://formspree.io/f/meeeedgw" method="POST">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="text" name="nombre" class="form-control rounded-3" id="nameInput" placeholder="Tu nombre" required>
+                  <label for="nameInput">Nombre</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="email" name="email" class="form-control rounded-3" id="emailInput" placeholder="nombre@ejemplo.com" required>
+                  <label for="emailInput">Correo electrónico</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating mb-4">
+                  <textarea name="mensaje" class="form-control rounded-3" id="messageInput" placeholder="Escribe tu mensaje" style="height: 150px" required></textarea>
+                  <label for="messageInput">Tu mensaje</label>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" id="submit-btn" class="btn btn-lg btn-light rounded-pill fw-bold px-5 py-3 shadow-sm text-primary w-100 w-md-auto">
+                  <i class="bi bi-send-fill me-2"></i> Enviar Mensaje
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div id="status" class="mt-4 p-3 rounded-3 d-none text-center fw-bold"></div>
+          
         </div>
       </div>
     </div>
   </div>
 </section>
 
-    <!-- Pie de página -->
-    <footer class="seccion-oscura d-flex flex-column justify-content-center align-items-center">
-        <img class="footer-logo" src="imagenes/icono.png" alt="Logo portafolio">
-        <p class="footer-texto text-center">Aprendiendo y creando cada día.<br>¿Creamos algo juntos?</p>
-        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
-            <a href="https://github.com/Adrian24prog/" target="_blank"><i class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/in/adrian-dondarza-martin-5a71a7356/" target="_blank"><i class="bi bi-linkedin"></i></a>
-            <a href="https://www.instagram.com/adrian_dm06/" target="_blank"><i class="bi bi-instagram"></i></a>
-        </div>
-        <div class="derechos-de-autor">Creado por Adrián Dondarza © 2025</div>
-    </footer>
+  <footer class="py-5 footer-custom text-white">
+    <div class="container text-center">
+      <img class="footer-logo mb-3" src="imagenes/icono.png" alt="Logo">
+      <p class="fs-5 mb-4 text-white-50">¿Creamos algo juntos?</p>
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <a href="https://github.com/Adrian24prog/" target="_blank" class="social-icon-hover"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/adrian-dondarza-martin-5a71a7356/" target="_blank" class="social-icon-hover"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/adrian_dm06/" target="_blank" class="social-icon-hover"><i class="bi bi-instagram"></i></a>
+        <a href="mailto:adriandondarza@gmail.com" class="social-icon-hover"><i class="bi bi-envelope"></i></a>
+      </div>
+      <div class="pt-4 border-top border-secondary text-white-50 small">
+        Desarrollado con 💙 por Adrián Dondarza © 2025
+      </div>
+    </div>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('theme-toggle');
+      const body = document.body;
+
+      if (localStorage.getItem('theme') === 'dark') {
+        toggle.checked = true;
+        body.classList.add('dark-mode');
+      }
+
+      toggle.addEventListener('change', function() {
+        if (toggle.checked) {
+          body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          body.classList.remove('dark-mode');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
+  </script>
+
+  <script>
+  const form = document.getElementById("my-form");
+  const status = document.getElementById("status");
+  const btn = document.getElementById("submit-btn");
+
+  async function handleSubmit(event) {
+    event.preventDefault(); // Evita que la página se recargue o se vaya a otra web
+    
+    const data = new FormData(event.target);
+    
+    // Cambiamos el estado del botón mientras envía
+    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
+    btn.disabled = true;
+
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        // --- ÉXITO ---
+        status.innerHTML = "¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto. ✅";
+        status.classList.remove("d-none", "bg-danger", "text-white");
+        status.classList.add("bg-success", "text-white"); // Fondo verde para éxito
+        
+        form.reset(); // <--- ESTO VACÍA LAS CASILLAS AUTOMÁTICAMENTE
+      } else {
+        // --- ERROR DE SERVIDOR ---
+        response.json().then(data => {
+          status.innerHTML = "Error: " + (data.errors ? data.errors[0].message : "No se pudo enviar.");
+          status.classList.remove("d-none", "bg-success");
+          status.classList.add("bg-danger", "text-white");
+        });
+      }
+    }).catch(error => {
+      // --- ERROR DE CONEXIÓN ---
+      status.innerHTML = "Hubo un problema de conexión. Inténtalo de nuevo.";
+      status.classList.remove("d-none", "bg-success");
+      status.classList.add("bg-danger", "text-white");
+    }).finally(() => {
+      // Restauramos el botón original
+      btn.innerHTML = '<i class="bi bi-send-fill me-2"></i> Enviar Mensaje';
+      btn.disabled = false;
+      
+      // El mensaje desaparece tras 6 segundos para dejar el diseño limpio
+      setTimeout(() => {
+        status.classList.add("d-none");
+      }, 6000);
+    });
+  }
+
+  form.addEventListener("submit", handleSubmit);
+</script>
 </body>
 </html>

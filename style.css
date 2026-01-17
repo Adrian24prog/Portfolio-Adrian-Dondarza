@@ -1,468 +1,178 @@
-/* Barra de navegación */
-.navbar-custom {
-    background-color: #1b1b32;
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+/* ===============================
+   VARIABLES DE TEMA & GENERALES
+   =============================== */
+
+:root {
+    --color-fondo: #f8f9fa;
+    --color-texto-principal: #212529;
+    --color-texto-secundario: #6c757d;
+    --color-acento: #0d6efd; 
+    --color-nav: #1b1b32;
+    --color-nav-link: #ffffff;
+    --color-card-bg: #ffffff;
+    --color-seccion-clara: #ffffff;
+    --color-seccion-oscura: #1b1b32;
+    --color-dark-card: #f8f9fa;
+    --color-cta-bg: #0d6efd;
 }
 
-.navbar-custom .navbar-brand {
-    font-weight: bold;
-    font-size: 1.4rem;
-    color: white;
+body.dark-mode {
+    --color-fondo: #121212;
+    --color-texto-principal: #e9ecef;
+    --color-texto-secundario: #adb5bd;
+    --color-acento: #198754; 
+    --color-nav: #000000;
+    --color-nav-link: #adb5bd;
+    --color-card-bg: #1e1e1e;
+    --color-seccion-clara: #1e1e1e;
+    --color-seccion-oscura: #0d0d1a;
+    --color-dark-card: #2c2c2c;
+    --color-cta-bg: #198754; 
 }
 
-.navbar-custom .navbar-brand .logo {
-    width: 45px;
-    margin-right: 10px;
+/* Base */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
 }
 
-.navbar-custom .nav-link {
-    color: white !important;
-    font-weight: 500;
-    margin: 0 0.5rem;
-    transition: all 0.3s ease;
-}
+/* Clases de utilidad */
+.text-acento { color: var(--color-acento) !important; }
+.text-principal { color: var(--color-texto-principal) !important; }
+.text-secondary-color { color: var(--color-texto-secundario) !important; }
+.max-w-750 { max-width: 750px; }
 
-.navbar-custom .nav-link:hover {
-    color: #0d6efd !important; 
-    transform: scale(1.1);
-}
+.section-light { background-color: var(--color-seccion-clara) !important; }
+.section-dark { background-color: var(--color-seccion-oscura) !important; }
+.bg-dark-card { background-color: var(--color-dark-card) !important; }
+.cta-box { background-color: var(--color-cta-bg) !important; transition: 0.4s ease; }
 
-
-/* Estilos generales */
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-family: 'Segoe UI';
-
-}
-
-.seccion-oscura {
-    color: white;
-    background-color: #1b1b32;
-}
-
-.seccion-oscura2 {
-    color: white;
-    background-color: #1b1b32;
-    margin-top: 150px;
-}
-
-.seccion-titulo {
-    font-size: 2rem;
-    padding: 15px 0;
-    font-family: 'Segoe UI';
-}
-
-.seccion-texto {
-    font-size: 1.2rem;
-    color: white;
-
-}
-
-.seccion-clara {
-    color: black;
-    background-color: white;
-}
-
-
-.seccion-descripcion {
-    font-size: 1.2;
-}
-
-.btn-info {
-    font-size: 1.1rem;
-    margin: 20px;
-
-}
-
-.texto-negro {
-    color: black;
-}
-
-.texto-blanco {
-    color: white;
-}
-
-
-
-/* Hero Section */
-.hero {
-    background-color: #f5f6f7; 
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    color: #1b1b32;
-}
-
-.hero-principal h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 15px 0 10px;
-}
-
-.hero-principal h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #615151; 
-    margin-bottom: 20px;
-}
-
-.hero-img-desarrollador {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 4px solid #1b1b32;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    margin-bottom: 20px;
-}
-
-/* Botón Hero */
-.btn-hero {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #0d6efd; 
-    color: white;
-    font-weight: bold;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-hero:hover {
-    background-color: #198754; 
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-/* Seccion Sobre mi */
-.sobre-mi {
-    padding: 10px;
-    height: 500px;
-}
-
-.sobre-mi .contenedor {
-    max-width: 600px;
-    text-align: center;
-}
-
-/* Seccion Experiencia */
-.experiencia {
-    padding: 40px 40px 60px 40px;
-
-}
-
-.experiencia .columna {
-    padding: 20px;
-    border: 2px solid #8080804d;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    transition: all 0.2s ease-in;
-}
-
-.experiencia .columna:hover {
-    color: white;
-    background-color: #1b1b32;
-}
-
-.experiencia i {
-    font-size: 2.5rem;
-    color: greenyellow;
-    background-color: black;
-    padding: 8px 19px;
-    border-radius: 50%;
-}
-
-.experiencia-titulo {
-    font-size: 25px;
-    font-weight: bold;
-    margin: 10px 0;
-
-}
-
-.badges-contenedor {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-
-}
-
-.badge {
-    margin: 5px;
-}
-
-/* Seccion Proyectos */
-.proyectos-recientes {
-    padding: 40px;
-}
-
-.proyectos-recientes img {
-    width: 100%;
-    height: 250px;      
-    object-fit: cover;     
-    padding: 10px;
-    border-radius: 10px;
-    display: block;
-    transition: all 0.2s ease;
-}
-
-.proyectos-contenedor {
-    padding-top: 60px;
-    margin-bottom: 40px;
-}
-
-.proyecto {
-    position: relative;
-}
-
-.overlay {
-    transition: all 0.2s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.overlay p {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-.proyecto:hover img {
-    opacity: 0.5;
-}
-
-.proyecto:hover .overlay {
-    opacity: 1;
-}
-
-.overlay .iconos-contenedor {
-    display: flex;
-    margin-left: 18px;
-}
-
-.overlay i {
-    color: black;
-    font-size: 60px;
-    margin: 10px;
-}
-
-/* Seccion Contacto */
-.contacto .container {
-    max-width: 1100px;
-    min-height: 200px;
-    padding: 20px;
-}
-
-.contacto .rectangulo {
-  background-color: #0d6efd; /* Azul Bootstrap */
-  color: white;
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.contacto .row {
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-}
-
-.contacto .descripcion {
-    color: white;
-    font-size: 1.2rem;
-}
-
-.contacto button {
-    color: white;
-    font-weight: bold;
-    background-color: transparent;
-    border: 2px solid white;
-    padding: 1.25em 2em;
-    margin: 10px;
-    border-radius: 100px;
-    transition: all 0.2s ease-in-out;
-}
-
-.contacto button:hover {
-    background-color: white;
-    color: black;
-}
-
-.contacto button i {
-    color: white;
-    font-size: 1.3rem;
-    transition: all 0.2s ease-in-out;
-}
-
-.contacto button:hover i {
-    
-    color: black;
-}
-
-/* Footer */
-footer {
-    min-height: 500px;
-
-}
-
-.footer-logo {
-    height: 80px;
-    width: 80px;
-    margin: 10px;
-}
-
-.footer-texto {
-    font-size: 1.5rem;
-    padding: 20px;
-    margin-bottom: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-
-}
-
-.iconos-redes-sociales a {
-height: 50px;
+/* ===============================
+   TOGGLE TEMA (FLOTANTE)
+   =============================== */
+.theme-switch {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--color-acento);
     width: 50px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 2px;
-    margin: 10px;
-    border: 2px solid white;
+    height: 50px;
     border-radius: 50%;
-    transition: all 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2000;
+    transition: 0.3s;
+    border: 2px solid white;
+}
+.theme-switch::before { content: "🌙"; font-size: 22px; }
+body.dark-mode .theme-switch::before { content: "☀️"; }
+.theme-switch:hover { transform: scale(1.1); }
+
+/* ===============================
+   NAVBAR
+   =============================== */
+.navbar-custom { background-color: var(--color-nav); }
+.logo { width: 32px; filter: brightness(0) invert(1); }
+.nav-link:hover { color: var(--color-acento) !important; }
+
+/* ===============================
+   HERO
+   =============================== */
+.hero-section { min-height: 70vh; }
+.hero-img-dev {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 8px solid var(--color-acento);
+    object-fit: cover;
 }
 
-.iconos-redes-sociales i {
+/* ===============================
+   TARJETAS & EFECTOS
+   =============================== */
+.card {
+    background-color: var(--color-card-bg);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+body.dark-mode .card { border: 1px solid rgba(255,255,255,0.05); }
+
+.transition-hover-up { transition: 0.3s ease; }
+.transition-hover-up:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+.cert-card { border-left: 5px solid var(--color-acento) !important; }
+.border-acento-hover:hover { border: 1px solid var(--color-acento) !important; }
+
+/* ===============================
+   FOOTER & REDES
+   =============================== */
+.footer-custom { background-color: var(--color-nav); }
+.footer-logo { width: 50px; filter: brightness(0) invert(1); }
+
+.social-icon-hover {
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    font-size: 1.5rem;
-    transition: all 0.2s ease-in;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-icon-hover:hover {
+    background: var(--color-acento);
+    transform: translateY(-3px);
+    color: white;
 }
 
-.iconos-redes-sociales a:hover {
-    background-color: white;
-    border: 2px solid rgb(13, 110, 253);
+/* ===============================
+   RESPONSIVE (MOVIL)
+   =============================== */
+@media (max-width: 768px) {
+    .display-3 { font-size: 2.5rem; }
+    .display-4 { font-size: 2rem; }
+    .hero-img-dev { width: 220px; height: 220px; }
+    .hero-section { text-align: center; }
+    .theme-switch { bottom: 15px; right: 15px; width: 45px; height: 45px; }
+    .cta-box { padding: 2rem !important; }
 }
 
-.iconos-redes-sociales a:hover i {
-    color: black;
-   
-}
-.derechos-de-autor {
-    font-size: 15px;
-    color: #aeaeae;
-    padding: 20px;
+
+/* Ajustes para los inputs del formulario */
+.form-control {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Adaptable (responsivo) */
-
-@media screen and (max-width: 400px) {
-    .overlay p {
-        font-size: 18px;
-    }
-
-    .overlay i {
-        font-size: 40px;
-
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .navbar-brand {
-        display: none;
-    }
-
-}
-
-@media screen and (max-width: 700px) {
-    .hero-inferior-imagen {
-        max-width: 500px;
-    }
-}
-
-/* Soft Skills - estilo tarjetas */
-.skill-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
     background-color: #ffffff;
 }
 
-.skill-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-    background-color: #f8f9fa;
+/* En modo oscuro, podemos hacer los labels más legibles si es necesario */
+body.dark-mode .form-floating label {
+    color: #495057;
 }
 
-/* Certificaciones*/
-.cert-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #ffffff;
-    border-left: 6px solid #0d6efd; 
+#status {
+    transition: all 0.5s ease;
+    font-size: 1.1rem;
 }
 
-.cert-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
-    background: #f8f9fa;
-    border-left: 6px solid #198754; 
+/* Animación de entrada para el mensaje */
+.bg-success {
+    background-color: #28a745 !important;
 }
 
-/* Estado normal del badge */
-.cert-card .badge {
-    display: inline-block;
-    padding: 0.4em 0.8em;
-    font-size: 0.85rem;
-    border-radius: 12px;
-    background-color: #198754; /* verde bootstrap */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Hover del badge */
-.cert-card .badge:hover {
-    background-color: #0d6efd; /* azul bootstrap */
-    color: #fff;
-    transform: scale(1.05);
-}
-
-/* Idiomas */
-.idiomas {
-  background-color: #f8f9fa;
-}
-
-.idiomas h2 {
-  font-weight: 700;
-  color: #1b1b32;
-}
-
-.idioma-bar {
-  height: 25px;
-  border-radius: 15px;
-  overflow: hidden;
-  background-color: #e9ecef;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
-}
-
-.progress-bar {
-  font-weight: bold;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: width 1s ease-in-out;
+.bg-danger {
+    background-color: #dc3545 !important;
 }
