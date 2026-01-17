@@ -51,6 +51,26 @@ body {
 .cta-box { background-color: var(--color-cta-bg) !important; transition: 0.4s ease; }
 
 /* ===============================
+   BOTÓN "VER CREDENCIAL" (SOLUCIÓN)
+   =============================== */
+.btn-acento-badge {
+    background-color: var(--color-acento) !important;
+    color: #ffffff !important; /* Siempre blanco para contraste */
+    font-weight: 600;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border: none;
+    display: inline-block;
+}
+
+.btn-acento-badge:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    color: #ffffff !important;
+}
+
+/* ===============================
    TOGGLE TEMA (FLOTANTE)
    =============================== */
 .theme-switch {
@@ -110,6 +130,14 @@ body.dark-mode .card { border: 1px solid rgba(255,255,255,0.05); }
 .cert-card { border-left: 5px solid var(--color-acento) !important; }
 .border-acento-hover:hover { border: 1px solid var(--color-acento) !important; }
 
+/* Badges de proyectos */
+.bg-acento-soft {
+    background-color: rgba(13, 110, 253, 0.15);
+}
+body.dark-mode .bg-acento-soft {
+    background-color: rgba(25, 135, 84, 0.25);
+}
+
 /* ===============================
    FOOTER & REDES
    =============================== */
@@ -144,35 +172,4 @@ body.dark-mode .card { border: 1px solid rgba(255,255,255,0.05); }
     .hero-section { text-align: center; }
     .theme-switch { bottom: 15px; right: 15px; width: 45px; height: 45px; }
     .cta-box { padding: 2rem !important; }
-}
-
-
-/* Ajustes para los inputs del formulario */
-.form-control {
-    border: none;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-.form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
-    background-color: #ffffff;
-}
-
-/* En modo oscuro, podemos hacer los labels más legibles si es necesario */
-body.dark-mode .form-floating label {
-    color: #495057;
-}
-
-#status {
-    transition: all 0.5s ease;
-    font-size: 1.1rem;
-}
-
-/* Animación de entrada para el mensaje */
-.bg-success {
-    background-color: #28a745 !important;
-}
-
-.bg-danger {
-    background-color: #dc3545 !important;
 }

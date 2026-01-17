@@ -107,21 +107,56 @@
     </div>
   </section>
 
+  <section id="certificaciones" class="py-5 section-dark">
+    <div class="container text-center text-white">
+      <h2 class="display-4 fw-bold mb-5">Certificaciones</h2>
+      <div class="row g-4 justify-content-center">
+        
+        <div class="col-12 col-lg-6 text-start">
+          <div class="card cert-card p-4 shadow-lg rounded-4 h-100 transition-hover-up">
+            <div class="d-flex align-items-start">
+              <i class="bi bi-code-slash fs-2 text-acento me-3"></i>
+              <div>
+                <h5 class="fw-bold mb-1 text-principal">Desarrollo Web Moderno con Laravel</h5>
+                <p class="small text-secondary-color mb-2">OpenWebinars | En curso</p>
+                <p class="small text-secondary-color">Curso enfocado en el desarrollo de aplicaciones web con Laravel y PHP.</p>
+              </div>
+            </div>
+            <a href="https://academia.openwebinars.net/portada/desarrollo-web-moderno-laravel-teoria-practica/" target="_blank" class="btn btn-acento-badge text-decoration-none mt-3 align-self-start px-3 py-2">Ver credencial</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6 text-start">
+          <div class="card cert-card p-4 shadow-lg rounded-4 h-100 transition-hover-up">
+            <div class="d-flex align-items-start">
+              <i class="bi bi-phone fs-2 text-acento me-3"></i>
+              <div>
+                <h5 class="fw-bold mb-1 text-principal">Desarrollo de Apps Móviles</h5>
+                <p class="small text-secondary-color mb-2">Google | Completado</p>
+                <p class="small text-secondary-color">Formación oficial sobre diseño y creación de apps multiplataforma.</p>
+              </div>
+            </div>
+            <a href="https://skillshop.exceedlms.com/student/collection/798207-apps" target="_blank" class="btn btn-acento-badge text-decoration-none mt-3 align-self-start px-3 py-2">Ver credencial</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <section id="proyectos" class="py-5 section-light">
     <div class="container text-center">
       <h2 class="display-4 fw-bold mb-3 text-principal">Mis Proyectos</h2>
       <p class="fs-5 mb-5 text-secondary-color">Explora mis desarrollos y código fuente.</p>
       
-      <div class="row g-4 justify-content-center">
+      <div class="row g-4 justify-content-center text-start">
         
-        <div class="col-12 col-md-6 col-lg-4 text-start">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-lg border-0 rounded-4 transition-hover-up overflow-hidden">
             <img src="imagenes/Portfolio2.png" class="card-img-top" alt="Captura Portfolio" style="height: 200px; object-fit: cover;">
             <div class="card-body d-flex flex-column p-4">
               <h5 class="card-title fw-bold text-principal">Portfolio Personal</h5>
-              <p class="card-text text-secondary-color small flex-grow-1">
-                Diseño y desarrollo de este portfolio web responsivo con modo claro/oscuro, enfocado en mi marca personal.
-              </p>
+              <p class="card-text text-secondary-color small flex-grow-1">Diseño y desarrollo de este portfolio web responsivo con modo claro/oscuro.</p>
               <div class="mt-3 mb-3">
                 <span class="badge bg-acento-soft text-acento">HTML</span>
                 <span class="badge bg-acento-soft text-acento">CSS</span>
@@ -135,14 +170,12 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-4 text-start">
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-lg border-0 rounded-4 transition-hover-up overflow-hidden">
             <img src="imagenes/GestionPedidos.png" class="card-img-top" alt="Captura Gestión Pedidos" style="height: 200px; object-fit: cover;">
             <div class="card-body d-flex flex-column p-4">
               <h5 class="card-title fw-bold text-principal">Gestión de Pedidos - Spring Boot</h5>
-              <p class="card-text text-secondary-color small flex-grow-1">
-                Backend robusto para la simulación de gestión de pedidos, clientes y stock utilizando el ecosistema de Spring y contenedores.
-              </p>
+              <p class="card-text text-secondary-color small flex-grow-1">Backend robusto para la simulación de gestión de pedidos y stock.</p>
               <div class="mt-3 mb-3">
                 <span class="badge bg-acento-soft text-acento">Java</span>
                 <span class="badge bg-acento-soft text-acento">Spring Boot</span>
@@ -200,7 +233,7 @@
     </div>
   </section>
 
-  <footer class="py-5 footer-custom text-white">
+  <footer class="py-4 footer-custom text-white">
     <div class="container text-center">
       <img class="footer-logo mb-3" src="imagenes/icono.png" alt="Logo">
       <p class="fs-5 mb-4 text-white-50">¿Creamos algo juntos?</p>
@@ -222,12 +255,10 @@
     document.addEventListener('DOMContentLoaded', function() {
       const toggle = document.getElementById('theme-toggle');
       const body = document.body;
-
       if (localStorage.getItem('theme') === 'dark') {
         toggle.checked = true;
         body.classList.add('dark-mode');
       }
-
       toggle.addEventListener('change', function() {
         if (toggle.checked) {
           body.classList.add('dark-mode');
