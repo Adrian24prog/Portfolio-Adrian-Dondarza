@@ -10,10 +10,11 @@
   
   <link rel="icon" type="image/png" href="imagenes/icono.png">
   
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
   <link href="style.css" rel="stylesheet">
 </head>
@@ -33,12 +34,13 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbar-toggler">
         <ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="#soft-skills">Habilidades</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certificaciones">Certificados</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#soft-skills">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#tecnologias">Tecnologías</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#certificaciones">Certificados</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#proyectos">Proyectos</a></li>
           <li class="nav-item d-lg-block d-none"><span class="nav-link text-white-50">|</span></li>
-          <li class="nav-item"><a class="nav-link btn btn-outline-light btn-sm rounded-pill px-3 ms-lg-2 mt-2 mt-lg-0" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-outline-light btn-sm rounded-pill px-3 ms-lg-2 mt-2 mt-lg-0 btn-nav-contacto" href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -47,31 +49,33 @@
   <section class="hero-section d-flex align-items-center py-5">
     <div class="container">
       <div class="row justify-content-center align-items-center g-5">
-        <div class="col-10 col-sm-8 col-md-5 order-md-2 text-center">
-          <img class="hero-img-dev img-fluid shadow-lg" src="imagenes/perfil.jpg" alt="Foto de perfil">
+        <div class="col-10 col-sm-8 col-md-5 order-md-2 text-center" data-aos="zoom-in">
+          <div class="hero-img-container">
+            <img class="hero-img-dev img-fluid shadow-lg" src="imagenes/perfil.jpg" alt="Foto de perfil">
+          </div>
           <p class="small mt-3 text-secondary-color">(Estudiante DAM en Ciudad Real)</p>
         </div>
-        <div class="col-md-7 order-md-1 text-center text-md-start">
+        <div class="col-md-7 order-md-1 text-center text-md-start" data-aos="fade-right">
           <p class="fs-4 fw-bold text-acento mb-1">Hola, soy</p>
           <h1 class="display-3 fw-bolder text-principal">Adrián Dondarza</h1>
           <h2 class="mb-4 fs-3 text-secondary-color">Estudiante de <strong>Desarrollo de Aplicaciones Multiplataforma</strong> 💻</h2>
-          <a href="#proyectos" class="btn btn-lg btn-primary rounded-pill fw-bold shadow-sm px-4 py-2 mt-3">Ver Proyectos <i class="bi bi-arrow-right ms-2"></i></a>
+          <a href="#proyectos" class="btn btn-lg btn-primary rounded-pill fw-bold shadow-sm px-4 py-2 mt-3 btn-hero-action">Ver Proyectos <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
       </div>
     </div>
   </section>
 
   <section id="sobre-mi" class="py-5 section-dark text-white">
-    <div class="container text-center py-4">
+    <div class="container text-center py-4" data-aos="fade-up">
       <div class="max-w-750 mx-auto">
         <h2 class="display-5 fw-bold mb-4">Conoce a Adrián Dondarza</h2>
-        <p class="fs-5 mb-4 lead text-light">
-          Soy estudiante de segundo año de <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>, apasionado por la tecnología y el software. Busco soluciones digitales creativas y eficientes.
-        </p>
-        <p class="fs-5 mb-5 lead text-light">
-          Actualmente profundizo en <strong>Java, SQL, HTML, CSS, JavaScript</strong> y exploro frameworks modernos. Mi objetivo es seguir aprendiendo y aportar valor a través de proyectos innovadores.
-        </p>
-        <a href="descargas/Europass-Adrian_Dondarza.pdf" download class="btn btn-lg btn-outline-light rounded-pill px-4">
+       <p class="fs-5 mb-4 lead text-light">
+  Soy estudiante de segundo año en <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>. Me da una gran satisfacción transformar ideas en código y siempre busco la forma más creativa y eficiente de resolver cada reto técnico.
+</p>
+<p class="fs-5 mb-5 lead text-light">
+  Actualmente estoy enfocado en perfeccionar mis habilidades en <strong>Java, SQL, PHP</strong>, entre otros, mientras exploro nuevos frameworks. Mi meta es seguir creciendo profesionalmente y aportar soluciones reales en proyectos que marquen la diferencia.
+</p>
+        <a href="descargas/Europass-Adrian_Dondarza.pdf" download class="btn btn-lg btn-outline-light rounded-pill px-4 hover-lift">
           <i class="bi bi-file-earmark-pdf me-2"></i>Descargar CV (Europass)
         </a>
       </div>
@@ -80,24 +84,24 @@
 
   <section id="soft-skills" class="py-5 section-light">
     <div class="container text-center">
-      <h2 class="display-4 fw-bold mb-5 text-principal">Soft Skills</h2>
+      <h2 class="display-4 fw-bold mb-5 text-principal" data-aos="fade-down">Soft Skills</h2>
       <div class="row g-4 justify-content-center">
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="card skill-card p-4 shadow-sm rounded-4 h-100 transition-hover-up">
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
+          <div class="card skill-card p-4 shadow-sm rounded-4 h-100 transition-hover-up interactive-card">
             <i class="bi bi-chat-dots fs-1 text-acento mb-3"></i>
             <h5 class="fw-bold text-principal">Comunicación</h5>
             <p class="small text-secondary-color">Me esfuerzo por expresar ideas con claridad y trabajar de forma efectiva en equipo.</p>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="card skill-card p-4 shadow-sm rounded-4 h-100 transition-hover-up">
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="flip-left" data-aos-delay="200">
+          <div class="card skill-card p-4 shadow-sm rounded-4 h-100 transition-hover-up interactive-card">
             <i class="bi bi-people fs-1 text-acento mb-3"></i>
             <h5 class="fw-bold text-principal">Trabajo en Equipo</h5>
             <p class="small text-secondary-color">Disfruto colaborar, compartir conocimientos y aportar al logro de objetivos comunes.</p>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="card skill-card p-4 shadow-sm rounded-4 h-100 transition-hover-up">
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="flip-left" data-aos-delay="300">
+          <div class="card skill-card p-4 shadow-sm rounded-4 h-100 transition-hover-up interactive-card">
             <i class="bi bi-lightning-charge fs-1 text-acento mb-3"></i>
             <h5 class="fw-bold text-principal">Resolución de Problemas</h5>
             <p class="small text-secondary-color">Busco soluciones prácticas y creativas a los desafíos que surgen en el desarrollo.</p>
@@ -107,13 +111,36 @@
     </div>
   </section>
 
+  <section id="tecnologias" class="py-5 section-light">
+    <div class="container text-center">
+      <h2 class="display-4 fw-bold mb-2 text-principal" data-aos="fade-down">Tecnologías</h2>
+      <p class="text-secondary-color mb-5">Herramientas y lenguajes que conozco durante mi formación</p>
+      
+      <div class="tech-container" data-aos="fade-up">
+        <div class="tech-box"><i class="devicon-java-plain tech-icon"></i><span class="tech-name">Java</span></div>
+        <div class="tech-box"><i class="devicon-csharp-plain tech-icon"></i><span class="tech-name">C#</span></div>
+        <div class="tech-box"><i class="devicon-kotlin-plain tech-icon"></i><span class="tech-name">Kotlin</span></div>
+        <div class="tech-box"><i class="devicon-php-plain tech-icon"></i><span class="tech-name">PHP</span></div>
+        <div class="tech-box"><i class="devicon-spring-original tech-icon"></i><span class="tech-name">Spring</span></div>
+        <div class="tech-box"><i class="devicon-laravel-original tech-icon"></i><span class="tech-name">Laravel</span></div>
+        <div class="tech-box"><i class="devicon-angularjs-plain tech-icon"></i><span class="tech-name">Angular</span></div>
+        <div class="tech-box"><i class="devicon-bootstrap-plain tech-icon"></i><span class="tech-name">Bootstrap</span></div>
+        <div class="tech-box"><i class="devicon-html5-plain tech-icon"></i><span class="tech-name">HTML5</span></div>
+        <div class="tech-box"><i class="devicon-css3-plain tech-icon"></i><span class="tech-name">CSS3</span></div>
+        <div class="tech-box"><i class="devicon-mysql-original tech-icon"></i><span class="tech-name">MySQL</span></div>
+        <div class="tech-box"><i class="devicon-oracle-original tech-icon"></i><span class="tech-name">Oracle</span></div>
+        <div class="tech-box"><i class="devicon-github-original tech-icon"></i><span class="tech-name">GitHub</span></div>
+        <div class="tech-box"><i class="devicon-docker-plain tech-icon"></i><span class="tech-name">Docker</span></div>
+      </div>
+    </div>
+  </section>
+
   <section id="certificaciones" class="py-5 section-dark">
     <div class="container text-center text-white">
-      <h2 class="display-4 fw-bold mb-5">Certificaciones</h2>
-      <div class="row g-4 justify-content-center">
-        
-        <div class="col-12 col-lg-6 text-start">
-          <div class="card cert-card p-4 shadow-lg rounded-4 h-100 transition-hover-up">
+      <h2 class="display-4 fw-bold mb-5" data-aos="fade-down">Certificaciones</h2>
+      <div class="row g-4 justify-content-center text-start">
+        <div class="col-12 col-lg-6" data-aos="fade-right">
+          <div class="card cert-card p-4 shadow-lg rounded-4 h-100 transition-hover-up interactive-card">
             <div class="d-flex align-items-start">
               <i class="bi bi-code-slash fs-2 text-acento me-3"></i>
               <div>
@@ -122,12 +149,11 @@
                 <p class="small text-secondary-color">Curso enfocado en el desarrollo de aplicaciones web con Laravel y PHP.</p>
               </div>
             </div>
-            <a href="https://academia.openwebinars.net/portada/desarrollo-web-moderno-laravel-teoria-practica/" target="_blank" class="btn btn-acento-badge text-decoration-none mt-3 align-self-start px-3 py-2">Ver credencial</a>
+            <a href="https://academia.openwebinars.net/portada/desarrollo-web-moderno-laravel-teoria-practica/" target="_blank" class="btn btn-acento-badge mt-3 align-self-start px-4 py-2">Ver credencial</a>
           </div>
         </div>
-
-        <div class="col-12 col-lg-6 text-start">
-          <div class="card cert-card p-4 shadow-lg rounded-4 h-100 transition-hover-up">
+        <div class="col-12 col-lg-6" data-aos="fade-left">
+          <div class="card cert-card p-4 shadow-lg rounded-4 h-100 transition-hover-up interactive-card">
             <div class="d-flex align-items-start">
               <i class="bi bi-phone fs-2 text-acento me-3"></i>
               <div>
@@ -136,32 +162,32 @@
                 <p class="small text-secondary-color">Formación oficial sobre diseño y creación de apps multiplataforma.</p>
               </div>
             </div>
-            <a href="https://skillshop.exceedlms.com/student/collection/798207-apps" target="_blank" class="btn btn-acento-badge text-decoration-none mt-3 align-self-start px-3 py-2">Ver credencial</a>
+            <a href="https://skillshop.exceedlms.com/student/collection/798207-apps" target="_blank" class="btn btn-acento-badge mt-3 align-self-start px-4 py-2">Ver credencial</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
   <section id="proyectos" class="py-5 section-light">
     <div class="container text-center">
-      <h2 class="display-4 fw-bold mb-3 text-principal">Mis Proyectos</h2>
+      <h2 class="display-4 fw-bold mb-3 text-principal" data-aos="fade-down">Mis Proyectos</h2>
       <p class="fs-5 mb-5 text-secondary-color">Explora mis desarrollos y código fuente.</p>
       
       <div class="row g-4 justify-content-center text-start">
-        
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-lg border-0 rounded-4 transition-hover-up overflow-hidden">
-            <img src="imagenes/Portfolio2.png" class="card-img-top" alt="Captura Portfolio" style="height: 200px; object-fit: cover;">
+        <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card h-100 shadow-lg border-0 rounded-4 transition-hover-up overflow-hidden project-card">
+            <div class="img-zoom-wrapper">
+              <img src="imagenes/Portfolio2.png" class="card-img-top" alt="Captura Portfolio">
+            </div>
             <div class="card-body d-flex flex-column p-4">
               <h5 class="card-title fw-bold text-principal">Portfolio Personal</h5>
               <p class="card-text text-secondary-color small flex-grow-1">Diseño y desarrollo de este portfolio web responsivo con modo claro/oscuro.</p>
               <div class="mt-3 mb-3">
                 <span class="badge bg-acento-soft text-acento">HTML</span>
                 <span class="badge bg-acento-soft text-acento">CSS</span>
-                <span class="badge bg-acento-soft text-acento">Bootstrap</span>
                 <span class="badge bg-acento-soft text-acento">JavaScript</span>
+                <span class="badge bg-acento-soft text-acento">Bootstrap</span>
               </div>
               <a href="https://github.com/Adrian24prog/Portfolio-Adrian-Dondarza" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill mt-auto">
                 <i class="bi bi-github me-1"></i> Ver Código
@@ -170,9 +196,11 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-lg border-0 rounded-4 transition-hover-up overflow-hidden">
-            <img src="imagenes/GestionPedidos.png" class="card-img-top" alt="Captura Gestión Pedidos" style="height: 200px; object-fit: cover;">
+        <div class="col-12 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100 shadow-lg border-0 rounded-4 transition-hover-up overflow-hidden project-card">
+            <div class="img-zoom-wrapper">
+              <img src="imagenes/GestionPedidos.png" class="card-img-top" alt="Captura Gestión Pedidos">
+            </div>
             <div class="card-body d-flex flex-column p-4">
               <h5 class="card-title fw-bold text-principal">Gestión de Pedidos - Spring Boot</h5>
               <p class="card-text text-secondary-color small flex-grow-1">Backend robusto para la simulación de gestión de pedidos y stock.</p>
@@ -188,70 +216,52 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <section id="contacto" class="py-5 section-cta">
+  <section id="contacto" class="py-5">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="cta-box p-4 p-md-5 rounded-4 shadow-lg">
-            <h2 class="display-5 fw-bold text-white text-center mb-4">¡Conectemos! 🤝</h2>
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="cta-box p-4 p-md-5 rounded-4 shadow-lg text-white">
+            <h2 class="display-5 fw-bold text-center mb-4">¡Conectemos! 🤝</h2>
             <form id="my-form" action="https://formspree.io/f/meeeedgw" method="POST">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <div class="form-floating mb-3">
-                    <input type="text" name="nombre" class="form-control rounded-3" id="nameInput" placeholder="Tu nombre" required>
-                    <label for="nameInput">Nombre</label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-floating mb-3">
-                    <input type="email" name="email" class="form-control rounded-3" id="emailInput" placeholder="nombre@ejemplo.com" required>
-                    <label for="emailInput">Correo electrónico</label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-floating mb-4">
-                    <textarea name="mensaje" class="form-control rounded-3" id="messageInput" placeholder="Escribe tu mensaje" style="height: 150px" required></textarea>
-                    <label for="messageInput">Tu mensaje</label>
-                  </div>
-                </div>
+              <div class="row g-3 text-dark">
+                <div class="col-md-6"><div class="form-floating mb-3"><input type="text" name="nombre" class="form-control" id="nameInput" placeholder="Nombre" required><label for="nameInput">Nombre</label></div></div>
+                <div class="col-md-6"><div class="form-floating mb-3"><input type="email" name="email" class="form-control" id="emailInput" placeholder="Correo" required><label for="emailInput">Correo</label></div></div>
+                <div class="col-12"><div class="form-floating mb-4"><textarea name="mensaje" class="form-control" id="messageInput" placeholder="Mensaje" style="height: 150px" required></textarea><label for="messageInput">Mensaje</label></div></div>
                 <div class="col-12 text-center">
-                  <button type="submit" id="submit-btn" class="btn btn-lg btn-light rounded-pill fw-bold px-5 py-3 shadow-sm text-primary w-100 w-md-auto">
-                    <i class="bi bi-send-fill me-2"></i> Enviar Mensaje
-                  </button>
+                  <button type="submit" id="submit-btn" class="btn btn-lg btn-light rounded-pill fw-bold px-5 btn-submit-custom">Enviar Mensaje</button>
                 </div>
               </div>
             </form>
-            <div id="status" class="mt-4 p-3 rounded-3 d-none text-center fw-bold"></div>
+            <div id="status" class="mt-4 p-3 rounded-3 d-none text-center fw-bold text-white"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="py-4 footer-custom text-white">
+  <footer class="py-5 footer-custom text-white">
     <div class="container text-center">
       <img class="footer-logo mb-3" src="imagenes/icono.png" alt="Logo">
       <p class="fs-5 mb-4 text-white-50">¿Creamos algo juntos?</p>
       <div class="d-flex justify-content-center gap-3 mb-4">
         <a href="https://github.com/Adrian24prog/" target="_blank" class="social-icon-hover"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/adrian-dondarza-martin-5a71a7356/" target="_blank" class="social-icon-hover"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.instagram.com/adrian_dm06/" target="_blank" class="social-icon-hover"><i class="bi bi-instagram"></i></a>
         <a href="mailto:adriandondarza@gmail.com" class="social-icon-hover"><i class="bi bi-envelope"></i></a>
       </div>
-      <div class="pt-4 border-top border-secondary text-white-50 small">
-        Desarrollado por Adrián Dondarza © 2025
-      </div>
+      <div class="pt-4 border-top border-secondary text-white-50 small">Desarrollado por Adrián Dondarza © 2026</div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
   <script>
+    AOS.init({ duration: 800, once: true });
+
     document.addEventListener('DOMContentLoaded', function() {
       const toggle = document.getElementById('theme-toggle');
       const body = document.body;
@@ -269,17 +279,15 @@
         }
       });
     });
-  </script>
 
-  <script>
     const form = document.getElementById("my-form");
     const status = document.getElementById("status");
     const btn = document.getElementById("submit-btn");
 
-    async function handleSubmit(event) {
+    form.addEventListener("submit", async function(event) {
       event.preventDefault();
       const data = new FormData(event.target);
-      btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
+      btn.innerHTML = 'Enviando...';
       btn.disabled = true;
 
       fetch(event.target.action, {
@@ -288,28 +296,24 @@
         headers: { 'Accept': 'application/json' }
       }).then(response => {
         if (response.ok) {
-          status.innerHTML = "¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto. ✅";
-          status.classList.remove("d-none", "bg-danger", "text-white");
-          status.classList.add("bg-success", "text-white");
+          status.innerHTML = "¡Enviado! ✅";
+          status.classList.remove("d-none");
+          status.classList.add("bg-success");
           form.reset();
         } else {
-          response.json().then(data => {
-            status.innerHTML = "Error: " + (data.errors ? data.errors[0].message : "No se pudo enviar.");
-            status.classList.remove("d-none", "bg-success");
-            status.classList.add("bg-danger", "text-white");
-          });
+          status.innerHTML = "Error ❌";
+          status.classList.remove("d-none");
+          status.classList.add("bg-danger");
         }
       }).catch(error => {
-        status.innerHTML = "Hubo un problema de conexión. Inténtalo de nuevo.";
-        status.classList.remove("d-none", "bg-success");
-        status.classList.add("bg-danger", "text-white");
+        status.innerHTML = "Error de conexión";
+        status.classList.remove("d-none");
       }).finally(() => {
-        btn.innerHTML = '<i class="bi bi-send-fill me-2"></i> Enviar Mensaje';
+        btn.innerHTML = 'Enviar Mensaje';
         btn.disabled = false;
         setTimeout(() => { status.classList.add("d-none"); }, 6000);
       });
-    }
-    form.addEventListener("submit", handleSubmit);
+    });
   </script>
 </body>
 </html>

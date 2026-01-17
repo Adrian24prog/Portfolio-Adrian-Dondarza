@@ -1,33 +1,39 @@
 /* ===============================
-   VARIABLES DE TEMA & GENERALES
+    VARIABLES DE TEMA & GENERALES
    =============================== */
 
 :root {
     --color-fondo: #f8f9fa;
     --color-texto-principal: #212529;
     --color-texto-secundario: #6c757d;
-    --color-acento: #0d6efd; 
+    --color-acento: #0056b3;
     --color-nav: #1b1b32;
     --color-nav-link: #ffffff;
     --color-card-bg: #ffffff;
     --color-seccion-clara: #ffffff;
     --color-seccion-oscura: #1b1b32;
     --color-dark-card: #f8f9fa;
-    --color-cta-bg: #0d6efd;
+    --color-cta-bg: #1a4a8e;
+    --tech-glow: rgba(0, 86, 179, 0.3);
+    --tech-card-bg: rgba(255, 255, 255, 0.8);
+    --shadow-interactive: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 body.dark-mode {
-    --color-fondo: #121212;
-    --color-texto-principal: #e9ecef;
-    --color-texto-secundario: #adb5bd;
-    --color-acento: #198754; 
-    --color-nav: #000000;
-    --color-nav-link: #adb5bd;
-    --color-card-bg: #1e1e1e;
-    --color-seccion-clara: #1e1e1e;
-    --color-seccion-oscura: #0d0d1a;
-    --color-dark-card: #2c2c2c;
-    --color-cta-bg: #198754; 
+    --color-fondo: #0f172a;
+    --color-texto-principal: #f8fafc;
+    --color-texto-secundario: #94a3b8;
+    --color-acento: #3282b8;
+    --color-nav: #020617;
+    --color-nav-link: #94a3b8;
+    --color-card-bg: #1e293b;
+    --color-seccion-clara: #0f172a;
+    --color-seccion-oscura: #020617;
+    --color-dark-card: #1e293b;
+    --color-cta-bg: #1e293b;
+    --tech-glow: rgba(50, 130, 184, 0.4);
+    --tech-card-bg: rgba(30, 41, 59, 0.7);
+    --shadow-interactive: 0 10px 40px rgba(0,0,0,0.4);
 }
 
 /* Base */
@@ -37,6 +43,7 @@ body {
     transition: background-color 0.4s ease, color 0.4s ease;
     font-family: 'Segoe UI', Roboto, sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Clases de utilidad */
@@ -51,98 +58,210 @@ body {
 .cta-box { background-color: var(--color-cta-bg) !important; transition: 0.4s ease; }
 
 /* ===============================
-   BOTÓN "VER CREDENCIAL" (SOLUCIÓN)
+    FOTO DE PERFIL INTERACTIVA
    =============================== */
-.btn-acento-badge {
-    background-color: var(--color-acento) !important;
-    color: #ffffff !important; /* Siempre blanco para contraste */
-    font-weight: 600;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    border: none;
+.hero-img-container {
+    position: relative;
     display: inline-block;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.btn-acento-badge:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-    color: #ffffff !important;
-}
-
-/* ===============================
-   TOGGLE TEMA (FLOTANTE)
-   =============================== */
-.theme-switch {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: var(--color-acento);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2000;
-    transition: 0.3s;
-    border: 2px solid white;
-}
-.theme-switch::before { content: "🌙"; font-size: 22px; }
-body.dark-mode .theme-switch::before { content: "☀️"; }
-.theme-switch:hover { transform: scale(1.1); }
-
-/* ===============================
-   NAVBAR
-   =============================== */
-.navbar-custom { background-color: var(--color-nav); }
-.logo { width: 32px; filter: brightness(0) invert(1); }
-.nav-link:hover { color: var(--color-acento) !important; }
-
-/* ===============================
-   HERO
-   =============================== */
-.hero-section { min-height: 70vh; }
 .hero-img-dev {
     width: 280px;
     height: 280px;
     border-radius: 50%;
     border: 8px solid var(--color-acento);
     object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.hero-img-container:hover {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.hero-img-container:hover .hero-img-dev {
+    box-shadow: 0 0 30px var(--color-acento);
+    border-color: #fff;
 }
 
 /* ===============================
-   TARJETAS & EFECTOS
+    BOTONES Y ANIMACIONES
    =============================== */
-.card {
-    background-color: var(--color-card-bg);
-    border: 1px solid rgba(0,0,0,0.05);
+.btn-hero-action {
+    background-color: var(--color-acento);
+    border: none;
+    transition: 0.3s;
+    animation: pulse-blue 2s infinite;
 }
-body.dark-mode .card { border: 1px solid rgba(255,255,255,0.05); }
 
-.transition-hover-up { transition: 0.3s ease; }
-.transition-hover-up:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+@keyframes pulse-blue {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 86, 179, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 86, 179, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 86, 179, 0); }
 }
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-submit-custom {
+    background-color: white !important;
+    color: var(--color-acento) !important;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-submit-custom:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0 !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* BOTÓN CREDENCIAL */
+.btn-acento-badge {
+    background-color: var(--color-acento) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-acento-badge:hover {
+    background-color: transparent !important;
+    border-color: var(--color-acento);
+    color: var(--color-acento) !important;
+    transform: translateX(5px);
+}
+
+/* ===============================
+    NAVBAR MEJORADO (TEXTO VISIBLE)
+   =============================== */
+.navbar-custom { background-color: var(--color-nav) !important; }
+.logo { width: 32px; filter: brightness(0) invert(1); }
+
+/* Links normales de la nav */
+.nav-link-custom {
+    color: rgba(255,255,255,0.85) !important;
+    transition: color 0.3s ease !important;
+}
+
+.nav-link-custom:hover {
+    color: var(--color-acento) !important;
+}
+
+/* Botón contacto específico para que el texto sea legible al hover */
+.btn-nav-contacto {
+    transition: all 0.3s ease !important;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+.btn-nav-contacto:hover {
+    background-color: white !important;
+    color: var(--color-nav) !important; /* Texto oscuro sobre fondo blanco */
+    transform: scale(1.05);
+}
+
+/* ===============================
+    TECNOLOGÍAS (TODOS LOS COLORES)
+   =============================== */
+.tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tech-box {
+    background: var(--tech-card-bg);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    width: 120px; 
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+.tech-box:hover {
+    transform: translateY(-10px) scale(1.1);
+    background: var(--color-card-bg);
+    box-shadow: 0 10px 25px var(--tech-glow);
+    border-color: var(--color-acento);
+}
+
+.tech-icon { font-size: 3rem; margin-bottom: 10px; transition: 0.3s; color: var(--color-texto-secundario); }
+.tech-name { font-size: 0.75rem; font-weight: 700; color: var(--color-texto-secundario); }
+.tech-box:hover .tech-name { color: var(--color-texto-principal); }
+
+/* Colores de iconos al hover */
+.tech-box:hover .devicon-java-plain { color: #f89820 !important; }
+.tech-box:hover .devicon-csharp-plain { color: #9b4993 !important; }
+.tech-box:hover .devicon-kotlin-plain { color: #7f52ff !important; }
+.tech-box:hover .devicon-php-plain { color: #777bb4 !important; }
+.tech-box:hover .devicon-spring-original { color: #6db33f !important; }
+.tech-box:hover .devicon-laravel-original { color: #ff2d20 !important; }
+.tech-box:hover .devicon-angularjs-plain { color: #dd0031 !important; }
+.tech-box:hover .devicon-bootstrap-plain { color: #7952b3 !important; }
+.tech-box:hover .devicon-html5-plain { color: #e34f26 !important; }
+.tech-box:hover .devicon-css3-plain { color: #1572b6 !important; }
+.tech-box:hover .devicon-mysql-original { color: #4479a1 !important; }
+.tech-box:hover .devicon-oracle-original { color: #f80000 !important; }
+.tech-box:hover .devicon-github-original { color: #181717 !important; }
+body.dark-mode .tech-box:hover .devicon-github-original { color: #ffffff !important; }
+.tech-box:hover .devicon-docker-plain { color: #2496ed !important; }
+
+/* ===============================
+    EFECTOS INTERACTIVOS CARDS
+   =============================== */
+.interactive-card {
+    transition: all 0.4s ease-in-out !important;
+    border: 1px solid transparent !important;
+    background-color: var(--color-card-bg) !important;
+}
+
+.interactive-card:hover {
+    transform: translateY(-12px) scale(1.02) !important;
+    box-shadow: var(--shadow-interactive) !important;
+    border-color: var(--color-acento) !important;
+}
+
+/* ===============================
+    PROYECTOS
+   =============================== */
+.project-card { background-color: var(--color-card-bg) !important; transition: all 0.4s ease; }
+.img-zoom-wrapper { overflow: hidden; height: 200px; }
+.img-zoom-wrapper img { transition: transform 0.5s ease; object-fit: cover; width: 100%; height: 100%; }
+.project-card:hover .img-zoom-wrapper img { transform: scale(1.15); }
+.project-card:hover { box-shadow: var(--shadow-interactive) !important; }
 
 .cert-card { border-left: 5px solid var(--color-acento) !important; }
-.border-acento-hover:hover { border: 1px solid var(--color-acento) !important; }
-
-/* Badges de proyectos */
-.bg-acento-soft {
-    background-color: rgba(13, 110, 253, 0.15);
-}
-body.dark-mode .bg-acento-soft {
-    background-color: rgba(25, 135, 84, 0.25);
-}
 
 /* ===============================
-   FOOTER & REDES
+    FOOTER
    =============================== */
-.footer-custom { background-color: var(--color-nav); }
-.footer-logo { width: 50px; filter: brightness(0) invert(1); }
+.footer-custom { 
+    background-color: #020617 !important; 
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo {
+    width: 50px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+.footer-logo:hover { transform: scale(1.2); }
 
 .social-icon-hover {
     width: 45px;
@@ -153,23 +272,39 @@ body.dark-mode .bg-acento-soft {
     align-items: center;
     justify-content: center;
     color: white;
-    text-decoration: none;
     transition: 0.3s;
 }
 .social-icon-hover:hover {
     background: var(--color-acento);
-    transform: translateY(-3px);
-    color: white;
+    transform: translateY(-5px) rotate(10deg);
+    color: white !important;
 }
 
 /* ===============================
-   RESPONSIVE (MOVIL)
+    MODO OSCURO SWITCH
    =============================== */
+.theme-switch {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--color-acento);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2000;
+    transition: 0.3s;
+    border: 3px solid white;
+}
+.theme-switch::before { content: "🌙"; font-size: 24px; }
+body.dark-mode .theme-switch::before { content: "☀️"; }
+.theme-switch:hover { transform: rotate(360deg) scale(1.1); }
+
 @media (max-width: 768px) {
     .display-3 { font-size: 2.5rem; }
-    .display-4 { font-size: 2rem; }
     .hero-img-dev { width: 220px; height: 220px; }
     .hero-section { text-align: center; }
-    .theme-switch { bottom: 15px; right: 15px; width: 45px; height: 45px; }
-    .cta-box { padding: 2rem !important; }
 }
